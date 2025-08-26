@@ -1,0 +1,1031 @@
+/* SANGi San-Motor's - Premium Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary: #2c3e50;
+    --primary-dark: #1a2530;
+    --primary-light: #4b6584;
+    --secondary: #e74c3c;
+    --accent: #3498db;
+    --accent-light: #5dade2;
+    --gold: #f39c12;
+    --silver: #bdc3c7;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --darker: #1a2530;
+    
+    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, #ff6b6b 100%);
+    --gradient-gold: linear-gradient(135deg, var(--gold) 0%, #e67e22 100%);
+    --gradient-silver: linear-gradient(135deg, var(--silver) 0%, #95a5a6 100%);
+    
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+    
+    --transition-fast: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-slow: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    --border-radius: 16px;
+    --border-radius-lg: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.7;
+    background-color: #f9f9f9;
+    background-image: 
+        radial-gradient(circle at 5% 10%, rgba(236, 240, 241, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 95% 10%, rgba(236, 240, 241, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 50% 90%, rgba(236, 240, 241, 0.3) 0%, transparent 20%);
+    background-attachment: fixed;
+}
+
+#sangi-textile {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container {
+    margin-bottom: 5rem;
+    padding: 3rem;
+    border-radius: var(--border-radius-lg);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--accent);
+    opacity: 0.8;
+    transition: var(--transition-slow);
+}
+
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.container:hover::before {
+    opacity: 1;
+    height: 6px;
+}
+
+h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 3.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 5px;
+    background: var(--gradient-secondary);
+    border-radius: 3px;
+}
+
+h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: var(--gradient-accent);
+    border-radius: 3px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin: 1.2rem 0 0.8rem;
+    color: var(--primary-dark);
+}
+
+h5 {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-top: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+strong {
+    color: var(#000000);
+    font-weight: 700;
+    position: relative;
+    padding: 0 2px;
+}
+
+
+/* ===================== Section: Title - Cleaner Version ===================== */
+.section-title {
+    text-align: center;
+    padding: 4rem 3rem;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: var(--border-radius-lg);
+    position: relative;
+    overflow: hidden;
+    max-width: 1400px;   /* Optional: max width */
+    margin: 0 auto 4rem;
+}
+
+/* Remove left side point / reduce radial effect */
+.section-title::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+    transform: rotate(30deg);
+}
+
+/* Gradient text */
+.section-title h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #fff 0%, #ecf0f1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+/* ===================== Subtitle - Premium ===================== */
+.subtitle {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.95);
+    position: relative;
+    z-index: 2;
+    margin-top: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #ffffff 0%, #ecf0f1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    transition: var(--transition);
+}
+.subtitle strong {
+  background: none; /* gradient override korbe */
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: initial;
+  font-weight: 700;
+  color: #e74c3c;
+}
+
+.subtitle:hover {
+    text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+/* ===================== Responsive ===================== */
+
+/* Tablet (<=1024px) */
+@media (max-width: 1024px) {
+    .section-title {
+        padding: 3.5rem 2rem;
+    }
+    .section-title h2 {
+        font-size: 2.4rem;
+    }
+    .subtitle {
+        font-size: 1.2rem;
+        margin-top: 0.8rem;
+    }
+}
+
+/* Mobile (<=768px) */
+@media (max-width: 768px) {
+    .section-title {
+        width: 98% !important;
+        padding: 3rem 1.5rem;
+    }
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+        margin-top: 0.6rem;
+    }
+}
+
+/* Small Mobile (<=480px) */
+@media (max-width: 480px) {
+    .section-title {
+        padding: 2.5rem 1rem;
+    }
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+}
+
+/* ---------------- General Container ---------------- */
+#st-section-about {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2b2b2b;
+  line-height: 1.8;
+  background-color: #f9f9f9;
+}
+
+/* ---------------- Section Header ---------------- */
+.mv-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* Header Section */
+.mv-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* Header Title with Underline */
+.mv-header h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #1e3356, #083354);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px; /* spacing for underline */
+  position: relative;
+}
+
+/* Underline */
+.mv-header h1::after {
+  content: '';
+  display: block;
+  width: 80px;          /* initial width */
+  height: 5px;          /* thickness */
+  background: linear-gradient(90deg, #305696, #0967ae);
+  margin: 10px auto 0;
+  border-radius: 2px;
+  transition: width 0.4s ease; /* smooth animation */
+}
+
+/* Hover Effect: underline grows to 80px */
+.mv-header h1:hover::after {
+  width: 160px;
+}
+
+
+.mv-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* ================= About Paragraphs Container ================= */
+.about-paragraphs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.2rem;
+  margin-top: 3rem;
+  padding: 0 10px;
+}
+
+/* ================= Individual Card ================= */
+.about-card {
+  position: relative;
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 2.5rem 2rem 2.5rem 3rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  cursor: default;
+}
+
+/* Left Border Animation */
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 0;
+  background: linear-gradient(180deg, #4c81b2, #56b6ff);
+  border-radius: 8px 0 0 8px;
+  transition: height 0.5s ease;
+}
+
+.about-card:hover::before {
+  height: 100%;
+}
+
+/* Floating Shadow + Lift on Hover */
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* ================= Card Icon ================= */
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(39, 174, 96, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  color: #f86300;
+  transition: all 0.35s ease;
+}
+
+.about-card:hover .card-icon {
+  transform: scale(1.2) rotate(-10deg);
+  color: #135fa5;
+}
+
+/* ================= Card Content ================= */
+.card-content h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(90deg, #1e3356 ); /* gradient color */
+  -webkit-background-clip: text; /* for Chrome/Safari */
+  background-clip: text; /* standard */
+  -webkit-text-fill-color: transparent; /* makes text show gradient */
+  letter-spacing: 0.3px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ================= Responsive Design ================= */
+@media screen and (max-width: 992px) {
+  .about-paragraphs {
+    gap: 1.8rem;
+  }
+  .card-content h4 {
+    font-size: 1.3rem;
+  }
+  .card-content p {
+    font-size: 0.97rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-paragraphs {
+    grid-template-columns: 1fr;
+  }
+  .about-card {
+    padding: 2rem 1.5rem 2rem 2.5rem;
+  }
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
+  }
+  .card-content h4 {
+    font-size: 1.2rem;
+  }
+  .card-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ================= Mission / Vision / Values Section ================= */
+.mv-section {
+    max-width: 1400px;
+    margin: 0 auto 6rem;
+    padding: 50px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 4rem;
+}
+
+.mv-section-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.mv-section-title {
+    font-size: 2.3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #1e3356, #083354);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px; /* spacing for underline */
+  position: relative;
+}
+
+/* Underline pseudo element */
+.mv-section-title::after {
+    content: '';
+  display: block;
+  width: 180px;          /* initial width */
+  height: 5px;          /* thickness */
+  background: linear-gradient(90deg, #305696, #0967ae);
+  margin: 10px auto 0;
+  border-radius: 2px;
+  transition: width 0.4s ease; /* smooth animation */
+}
+
+/* Hover effect */
+.mv-section-title:hover::after {
+    width: 250px; /* underline full width on hover */
+}
+
+
+.mv-section-subtitle {
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 800px;
+    margin: 2rem auto;
+    line-height: 1.8;
+}
+
+/* Card Content/Cards Wrapper ---------------- */
+.mv-card-content {
+    text-align: center; /* Title + Text + Badge centered */
+
+}
+
+/* Wrapper for all cards */
+.mv-cards-wrapper { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Individual Card */
+.mv-card {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    padding: 2.2rem, 2rem;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border-left: 6px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center all content */
+    text-align: center;  /* text center */
+}
+
+/* Left Border Animation */
+.mv-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 0;
+    background: linear-gradient(180deg, #4c81b2, #56b6ff);
+    transition: height 0.5s ease;
+    border-radius: 6px 0 0 6px;
+    z-index: 1;
+}
+
+.mv-card:hover::before {
+    height: 100%;
+}
+
+/* Card Hover Effect */
+.mv-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* Icon */
+.mv-card-icon {
+    font-size: 2.5rem;
+    color: #ff8800;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    transition: transform 0.35s ease, color 0.35s ease;
+}
+
+.mv-card:hover .mv-card-icon {
+    transform: scale(1.3) rotate(-5deg);
+    color: #236baa;
+}
+
+/* Card Content */
+.mv-card-title {
+     font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1e3356;
+    letter-spacing: 0.3px;
+    text-align: center; /* Centered title */
+}
+
+.mv-card-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1.2rem;
+}
+
+/* Badge */
+.mv-card-badge {
+    text-align: center;
+    display: inline-block;
+    padding: 7px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #4c81b2, #0f5f9c);
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    margin: 0 auto; /* Centered horizontally */
+}
+
+.mv-card:hover .mv-card-badge {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .mv-cards-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.8rem;
+    }
+    .mv-card {
+        padding: 2rem 1.5rem;
+    }
+    .mv-card-title {
+        font-size: 1.4rem;
+    }
+    .mv-card-text {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* ---------------- Responsive ---------------- */
+@media screen and (max-width: 992px) {
+    .mv-cards-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mv-section {
+        padding: 40px 15px;
+    }
+    .mv-section-title {
+        font-size: 2.2rem;
+    }
+    .mv-card-title {
+        font-size: 1.35rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mv-cards-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .mv-card {
+        padding: 2rem 1.5rem;
+    }
+    .mv-section-title {
+        font-size: 1.9rem;
+    }
+    .mv-card-title {
+        font-size: 1.25rem;
+    }
+}
+
+/* ---------------- Section Container ---------------- */
+.section-products {
+    max-width: 1400px;
+    margin: 0 auto 5rem;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Section Title */
+#st-products-title {
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: #1e3356;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline below title */
+#st-products-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg,  #305696, #0967ae);
+    margin: 12px auto 0;
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+#st-products-title:hover::after {
+    width: 180px; /* expand on hover */
+}
+
+/* Grid Layout for Products */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+/* ---------------- Individual Product Card with Top Border ---------------- */
+.product-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-top: 6px solid transparent; /* default top border */
+}
+
+/* Gradient Top Border */
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #4c81b2, #56b6ff);
+    border-radius: 6px 6px 0 0;
+    z-index: 2;
+    transition: all 0.35s ease;
+}
+
+/* Hover Effect for Card */
+.product-card:hover::before {
+    height: 7px; /* border becomes slightly thicker on hover */
+}
+
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* Product Title */
+.product-card h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e3356;
+    margin-bottom: 1rem;
+}
+
+/* Product Description */
+.product-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Hover Effect for Card */
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .product-grid {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #st-products-title {
+        font-size: 2.4rem;
+    }
+    .product-card {
+        padding: 1.8rem 1.2rem;
+    }
+    .product-card:hover::before {
+    height: 3px; /* border becomes slightly thicker on hover */
+}
+.product-card::before{
+  height: 1px;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+    #st-products-title {
+        font-size: 2rem;
+    }
+    .product-card {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* ================= Section Features ================= */
+.section-features {
+  max-width: 1400px;
+  margin: 0 auto 5rem;
+  padding: 3rem 1rem;
+}
+
+.section-features .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Section Title with Underline */
+.section-features .section-header h3 {
+  font-size: 2.3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #1e3356, #083354);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline */
+.section-features .section-header h3::after {
+  content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg,  #305696, #0967ae);
+    margin: 12px auto 0;
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+/* Hover Effect */
+.section-features .section-header h3:hover::after {
+  width: 160px;              /* underline expands full width */
+}
+
+
+.section-features .section-header .section-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ================= Feature Grid ================= */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+/* ================= Individual Feature Card ================= */
+.feature-card {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border-left: 6px solid transparent;
+  text-align: center;
+}
+
+/* Gradient Left Border Animation */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 0;
+  background: linear-gradient(180deg, #4c81b2, #56b6ff);
+  transition: height 0.5s ease;
+  border-radius: 6px 0 0 6px;
+  z-index: 1;
+}
+
+.feature-card:hover::before {
+  height: 100%;
+}
+
+/* Card Hover Effect */
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* Icon */
+.feature-card .card-icon {
+  font-size: 2.5rem;
+  color: #ff8800;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+.feature-card:hover .card-icon {
+  transform: scale(1.2);
+  color: #236baa;
+}
+
+/* Card Content */
+.feature-card .card-content h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color:var(#1e3356);
+}
+
+.feature-card .card-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* ================= Responsive ================= */
+@media screen and (max-width: 992px) {
+  .feature-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .feature-card {
+    padding: 1.8rem 1.2rem;
+  }
+  .feature-card .card-content h4 {
+    font-size: 1.3rem;
+  }
+  .feature-card .card-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-cta {
+    text-align: center;
+    background: var(--gradient-accent);
+    color: white;
+}
+
+.section-cta h3 {
+    color: rgb(255, 255, 255);
+}
+
+.section-cta h3::after {
+    background: rgba(30, 30, 31, 0.5);
+}
+
+.section-cta p {
+    color: rgba(41, 38, 38, 0.9);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: white;
+    color: var(--primary);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
+    transform: translateY(100%);
+    transition: var(--transition);
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cta-btn:hover::before {
+    transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

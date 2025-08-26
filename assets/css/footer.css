@@ -1,0 +1,482 @@
+/* ================= Footer Premium ================= */
+.footer-premium {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ccc;
+  background-color: #0f0f0f;
+  padding: 60px 20px 30px;
+  line-height: 1.6;
+  border-top: 3.5px solid #003cff;
+}
+
+/* ---------------- Footer Top ---------------- */
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.footer-box {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 25px 20px;
+  flex: 0 1 360px;
+  max-width: 360px;
+  min-height: 250px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.footer-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px #0066cc73;
+}
+
+/* ---------------- Footer Section Headings ---------------- */
+.footer-box.footer-about h3,
+.footer-box.footer-links h3,
+.footer-middle .footer-title,
+.footer-box.office-block h4 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+/* About / Quick Links Headers (Sanji Group + Quick Links) */
+.footer-box.footer-about h3,
+.footer-box.footer-links h3 {
+  font-size: 1.4rem;
+  background: var(--secondary-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Unique underline for About & Quick Links */
+.footer-box.footer-about h3::after,
+.footer-box.footer-links h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #0066cc, #9b59b6); /* unique gradient */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.footer-box.footer-about h3:hover::after,
+.footer-box.footer-links h3:hover::after {
+  width: 70px;
+  background: var(--primary-color);
+}
+
+/* ---------------- Footer Text ---------------- */
+.footer-box p,
+.footer-box address,
+.footer-box ul li {
+  font-size: 0.95rem;
+  color: #f1f1f1;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-box ul li a {
+  color: #ffeb33;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer-box ul li a:hover {
+  color: var(--primary-color); /* brand blue hover */
+  background: none;
+}
+
+/* ---------------- Middle Footer: Contact ---------------- */
+.footer-middle {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.footer-middle .footer-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+  font-family: "Segoe UI", "Poppins", sans-serif;
+  color: var(--secondary-color);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* ---------------- Premium Centered Underline ---------------- */
+.footer-middle .footer-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;               /* default width */
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); /* gradient underline */
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect: expand underline + brand color */
+.footer-middle .footer-title:hover::after {
+  width: 100px;
+  background: var(--primary-color);
+}
+
+.footer-middle .footer-title:hover::after {
+  width: 100px;
+  background: var(--primary-color);
+}
+
+/* ---------------- Contact Grid ---------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.office-block {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 20px 15px;       /* height কমানো জন্য padding কমানো */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  transition: all 0.3s ease;
+  text-align: center;
+  min-height: auto;         /* auto height */
+}
+
+.office-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 102, 204, 0.5);
+}
+
+.office-block h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;      /* vertical space কমানো */
+  background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  text-align: center;       /* desktop view এ center */
+}
+
+/* Desktop view: underline centered */
+.office-block h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;                /* center underline */
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #0066cc, #9b59b6);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.office-block address,
+.office-block ul li {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.office-block ul li a {
+  color: var(--secondary-color);
+  transition: var(--transition-fast);
+}
+
+.office-block ul li a:hover {
+  color: var(--primary-color);
+  background: none;
+}
+
+/* ---------------- Social Icons ---------------- */
+.footer-social {
+  margin-top: 45px;
+  text-align: center;
+}
+
+/* Heading */
+.footer-social h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: var(--secondary-color);   /* gradient/text same as others */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Matching underline with gradient */
+.footer-social h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #0066cc, #9b59b6); /* same gradient */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a {
+  text-decoration: none;  /* underline remove */
+}
+
+/* Hover effect on underline */
+.footer-social h3:hover::after {
+  width: 70px;
+  background: var(--primary-color); /* solid brand blue hover */
+}
+
+/* ---------------- Responsive ---------------- */
+@media screen and (max-width: 768px) {
+  .footer-social h3 {
+    font-size: 1.3rem;
+  }
+
+  .footer-social h3::after {
+    width: 40px;
+  }
+
+  .footer-social h3:hover::after {
+    width: 55px;
+  }
+  .social-icons a {
+  text-decoration: none;  /* underline remove */
+}
+}
+
+/* Social icons */
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background: var(--secondary-color);       /* icon background */
+  color: #1a1a1a;           /* icon color */
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.social-icons a:hover {
+  background: var(--primary-color); /* solid blue on hover */
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ---------------- Mobile View ---------------- */
+@media screen and (max-width: 768px) {
+  .footer-social h3 {
+    font-size: 1.3rem;
+  }
+
+  .footer-social h3::after {
+    width: 40%;
+    left: 35%
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    margin: 0 6px;
+  }
+}
+
+
+/* ---------------- Footer Bottom ---------------- */
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* ================= Responsive ================= */
+@media screen and (max-width: 992px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+.social-icons a {
+  text-decoration: none;  /* underline remove */
+}
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-box h3,
+  .footer-box h4,
+  .footer-middle .footer-title {
+    font-size: 1.25rem;
+  }
+
+  .footer-box p,
+  .footer-box address,
+  .footer-box ul li {
+    font-size: 0.95rem;
+  }
+
+  /* ---------------- Responsive Fix ---------------- */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer-box {
+    width: 100%;
+    max-width: 100%;
+    min-height: 220px; /* same height for all boxes */
+  }
+}
+
+
+   .footer-box.footer-about,
+  .footer-box.footer-links {
+    flex: 0 1 100%;      /* mobile এ full width */
+    max-width: 100%;
+    text-align: center;
+    padding: 15px 12px;
+    min-height: auto;
+  }
+
+  /* Heading inside mobile box */
+  .footer-box.footer-about h3,
+  .footer-box.footer-links h3 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  /* Underline: centered for mobile */
+  .footer-box.footer-about h3::after,
+  .footer-box.footer-links h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;          /* smaller underline for mobile */
+  }
+
+  .footer-middle .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-middle .contact-grid .footer-box.office-block {
+    flex: 0 1 85%;
+    max-width: 85%;
+    text-align: left;
+    padding: 15px 12px;
+    min-height: auto;
+  }
+
+  .footer-middle .footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+    .footer-middle .contact-grid .footer-box.office-block h4 {
+    text-align: left;
+  }
+
+  .footer-middle .contact-grid .footer-box.office-block h4::after {
+    left: 0;
+    transform: none;
+    width: 35px;             /* mobile view এ ছোট underline */
+  }
+
+  .office-block {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+
+  .footer-box.office-block h4 {
+    display: block;
+    padding-bottom: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+
+  .footer-box.office-block h4::after {
+    left: 0;
+    width: 40px;
+  }
+
+  .office-block address,
+  .office-block ul li {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-box {
+    padding: 20px 15px;
+    flex: 0 1 95%;
+  }
+
+  .office-block {
+    padding: 20px;
+  }
+
+  .office-block h4 {
+    font-size: 1.2rem;
+  }
+
+  .footer-middle .footer-title {
+    font-size: 1.5rem;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 1rem;
+  }
+  .social-icons a {
+  text-decoration: none;  /* underline remove */
+}
+
+}

@@ -1,0 +1,829 @@
+/* =============================
+   Ibn Khaldul Vaccine & Nursing Care Premium CSS
+   ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ================================
+   Global Styles
+   ================================ */
+:root {
+    --primary: #2c3e50;
+    --primary-dark: #1a2530;
+    --primary-light: #4b6584;
+    --secondary: #e74c3c;
+    --accent: #3498db;
+    --accent-light: #5dade2;
+    --gold: #f39c12;
+    --silver: #bdc3c7;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --darker: #1a2530;
+
+    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, #ff6b6b 100%);
+    --gradient-gold: linear-gradient(135deg, var(--gold) 0%, #e67e22 100%);
+    --gradient-silver: linear-gradient(135deg, var(--silver) 0%, #95a5a6 100%);
+
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+    --transition-fast: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-slow: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    --border-radius: 16px;
+    --border-radius-lg: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.7;
+    background-color: #f9f9f9;
+    background-image: 
+        radial-gradient(circle at 5% 10%, rgba(236, 240, 241, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 95% 10%, rgba(236, 240, 241, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 50% 90%, rgba(236, 240, 241, 0.3) 0%, transparent 20%);
+    background-attachment: fixed;
+}
+
+#ikh-vaccine-nursing {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+
+/* ================================
+   Container
+   ================================ */
+.container {
+    padding: 3rem;
+    border-radius: var(--border-radius-lg);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--accent);
+    opacity: 0.8;
+    transition: var(--transition-slow);
+}
+
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.container:hover::before {
+    opacity: 1;
+    height: 6px;
+}
+
+h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 3.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+
+h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: var(--gradient-accent);
+    border-radius: 3px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin: 1.2rem 0 0.8rem;
+    color: var(--primary-dark);
+}
+
+h5 {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-top: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+strong {
+    color: var(#3498db);
+    font-weight: 700;
+    position: relative;
+    padding: 0 2px;
+}
+
+/* ===================== Section: Title - Cleaner Version ===================== */
+.section-title {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: var(--border-radius-lg);
+    position: relative;
+    overflow: hidden;
+    height: auto;
+}
+
+/* Remove left side point / reduce radial effect */
+.section-title::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+    transform: rotate(30deg);
+}
+
+/* Gradient text */
+.section-title h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff 0%, #ecf0f1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 2;
+    margin-top: 4rem;
+}
+
+/* ===================== Subtitle - Premium ===================== */
+.subtitle {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.95);
+    position: relative;
+    z-index: 2;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    font-weight: 500;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #ffffff 0%, #ecf0f1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    transition: var(--transition);
+}
+
+.subtitle:hover {
+    text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+
+
+/* ---------------- Section ---------------- */
+.section-about {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  padding: 80px 0;
+  background: #f9f9f9;
+  position: relative;
+  margin-top: -2 !important;
+}
+
+/* ---------------- Intro Header ---------------- */
+.intro-header {
+  text-align: center;
+  margin: 4rem auto 2rem;
+  position: relative;
+}
+.highlight-gradient {
+  background: none !important;         /* remove any gradient */
+  -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+  -webkit-text-fill-color: #2c3e50 !important;  /* your desired color */
+  color: #1d2e3e !important;          /* fallback */
+}
+
+.intro-header .intro-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(#2c3e50) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Short Centered Underline */
+.intro-header .intro-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 50%; /* visible initially */
+  height: 4px;
+  background: linear-gradient(90deg, #448cc3, #1099f5);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+
+/* Hover: expand underline to full width */
+.intro-header .intro-title:hover::after {
+  width: 70%;
+}
+
+
+.intro-header .intro-subtitle {
+  font-size: 1.2rem;
+  color: #4a4a4a;             /* darker, premium shade */
+  margin-top: 12px;
+  line-height: 1.8;           /* slightly more airy */
+  letter-spacing: 0.5px;      /* elegant spacing */
+  max-width: 700px;           /* keep text centered and neat */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ---------------- Intro Cards ---------------- */
+.intro-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+.intro-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.intro-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+}
+.card-icon i {
+  font-size: 2.5rem;
+  color: #203482;
+  flex-shrink: 0;
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* Glow effect on hover of the card */
+.intro-card:hover .card-icon i {
+  color: #1099f5; /* brighter blue */
+  text-shadow: 0 0 10px #1099f5, 0 0 20px #1099f5, 0 0 30px #1099f5;
+}
+.card-content .card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.card-content .card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.card-content .card-points {
+  list-style: disc;
+  padding-left: 20px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ---------------- Highlight ---------------- */
+.highlight-gradient {
+  background: linear-gradient(90deg, #3757d8, #4f62c0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.highlight-text {
+  font-weight: 600;
+  color: #414246;
+}
+
+/* ---------------- Mission, Vision & Values ---------------- */
+.about-points-grid {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.about-points {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+}
+.about-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 3rem;
+  padding: 20px 15px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+}
+.about-card i {
+  font-size: 1.8rem;
+  color: #3757d8;
+}
+.about-card-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (min-width: 768px) {
+  .intro-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-points {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .intro-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-icon {
+    margin-bottom: 12px;
+  }
+}
+
+
+/* ================================
+   Services / Features
+   ================================ */
+   /* Section Title */
+/* Section Title */
+#ikh-services-title {
+  position: relative;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  color: var(--primary-dark) !important;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Default underline (visible, short, centered) */
+#ikh-services-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 50%; /* visible initially */
+  height: 4px;
+  background: linear-gradient(90deg, #448cc3, #1099f5);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+
+
+/* Hover → underline expands smoothly */
+#ikh-services-title:hover::after {
+  width: 70%;
+}
+
+
+.section-services {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+
+
+.card-title::after,
+.card-title::before {
+  content: none !important; /* underline pseudo-element remove */
+}
+
+
+.service-card {
+  position: relative;
+  background: #fff;
+  padding: 1.3rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: var(--transition);
+  margin-bottom: 3rem;
+  overflow: hidden; /* ensures line stays inside */
+}
+
+/* Hover effect (card lift) */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Left line effect */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, #1d7ed8, #3b82f6);
+  border-radius: 4px;
+  transition: height 0.5s ease;
+}
+
+.service-card:hover::before {
+  height: 100%;
+}
+
+.service-card i {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease, color 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* Card hover → icon effect */
+.service-card:hover i {
+  transform: scale(1.2); /* icon boro & halka ghorbe */
+  color: #1d4ed8; /* new color on hover */
+  text-shadow: 0 0 12px rgba(29, 78, 216, 0.6); /* glowing effect */
+}
+
+
+.service-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 0.8rem;
+}
+.service-card h3 {
+    text-decoration: none;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ================================
+   Facilities
+   ================================ */
+#ikh-facilities-title {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;   /* text center */
+  margin: 0 auto 3rem auto;  /* horizontally center */
+  padding-top: 4rem;
+  padding-bottom: 10px;
+  display: block;       /* block element রাখো */
+  cursor: default;
+  /* Gradient Text */
+  background: linear-gradient(90deg, #213d52, #093f64);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Underline Effect */
+#ikh-facilities-title::after {
+   content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 5rem; /* visible initially */
+  height: 4px;
+  background: linear-gradient(90deg, #448cc3, #1099f5);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+
+/* Hover Effect */
+#ikh-facilities-title:hover::after {
+  width: 9rem;
+}
+
+
+
+.section-facilities {
+    margin-bottom: 5rem;
+}
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.facility-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: var(--transition);
+    margin-bottom: 3rem;
+}
+
+.facility-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.facility-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 180px;
+}
+
+.facility-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--primary-dark);
+    margin: 1rem;
+}
+
+.facility-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0 1rem 1rem 1rem;
+    line-height: 1.6;
+}
+
+/* ================================
+   Testimonials
+   ================================ */
+   #ikh-testimonials-title {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;   /* text center */
+  margin: 0 auto 3rem auto;  /* horizontally center */
+  padding-top: 4rem;
+  padding-bottom: 10px;
+  display: block;       /* block element রাখো */
+  cursor: default;
+  /* Gradient Text */
+  background: linear-gradient(90deg, #213d52, #093f64);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Underline Effect */
+#ikh-testimonials-title::after {
+   content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 9rem; /* visible initially */
+  height: 4px;
+  background: linear-gradient(90deg, #448cc3, #1099f5);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+
+/* Hover Effect */
+#ikh-testimonials-title:hover::after {
+  width: 15rem;
+}
+.section-testimonials {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    font-style: italic;
+    color: var(--primary-dark);
+    transition: var(--transition);
+    margin-bottom: 3rem;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.testimonial-card h5 {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--accent);
+}
+
+/* ================================
+   CTA Button
+   ================================ */
+/* ================= Section: CTA ================= */
+.section-cta {
+  text-align: center;
+  background: var(--gradient-accent);
+  color: white;
+  padding: 5rem 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.section-cta h3 {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.section-cta h3::after {
+    background: rgba(30, 30, 31, 0.5);
+}
+
+.section-cta p {
+    color: rgba(41, 38, 38, 0.9);
+    max-width: 700px;
+    margin: 0 auto 2rem !important;
+}
+.cta-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #fff;
+  color: var(--primary);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
+  transform: translateY(100%);
+  transition: var(--transition);
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cta-btn:hover::before {
+  transform: translateY(0);
+}
+
+/* ================= Responsive ================= */
+
+/* Tablet (<=1024px) */
+@media (max-width: 1024px) {
+  .section-cta {
+    padding: 4rem 1.5rem;
+  }
+  .section-cta h3 {
+    font-size: 2rem;
+  }
+  .section-cta p {
+    font-size: 1rem;
+  }
+  .cta-btn {
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+  }
+}
+
+/* Mobile (<=768px) */
+@media (max-width: 768px) {
+  .section-cta {
+    padding: 3rem 1.2rem;
+  }
+  .section-cta h3 {
+    font-size: 1.7rem;
+  }
+  .section-cta p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .cta-btn {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+/* Small Mobile (<=480px) */
+@media (max-width: 480px) {
+  .section-cta {
+    padding: 2.5rem 1rem;
+  }
+  .section-cta h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  .section-cta p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .cta-btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
+  }
+}

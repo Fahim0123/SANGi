@@ -1,0 +1,438 @@
+/* ================= HERO SLIDER ================= */
+
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ---------------- Slides ---------------- */
+.hero-slider .slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.hero-slider .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-slider .slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------------- Overlay ---------------- */
+.hero-slider .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.65));
+  z-index: 1;
+}
+
+/* ---------------- Hero Content ---------------- */
+.hero-slider .hero-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* -------- Hero Heading Premium Look -------- */
+.hero-slider .hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  background: linear-gradient(120deg, #ffe680, #ff8c00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 18px rgba(0,0,0,0.6);
+}
+
+.hero-slider .hero-content p {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+  font-weight: 500;
+}
+
+/* ---------------- Premium Badge ---------------- */
+.hero-slider .hero-content .premium-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #0066cc, #00aaff);
+  color: #fff;
+  padding: 8px 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-slider .hero-content .premium-badge:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: linear-gradient(135deg, #00aaff, #0066cc);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.45);
+}
+
+/* ---------------- Premium Stats ---------------- */
+.hero-slider .hero-content .stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px; /* slightly tighter for premium look */
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+/* Individual Stat Box */
+.hero-slider .hero-content .stats span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 40px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #423333, #c0acf7); /* Premium red-pink gradient */
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.hero-slider .hero-content .stats span:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(19, 5, 101, 0.55);
+}
+
+/* Premium stat variation */
+.hero-slider .hero-content .premium-stat {
+  background: linear-gradient(135deg, #1dd1a1, #00d2d3); /* Teal → Cyan gradient */
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(29,209,161,0.4);
+}
+/* ---------------- Premium Call To Action ---------------- */
+.hero-slider .hero-content .cta-container a {
+  display: inline-block;
+  margin: 8px;
+  padding: 14px 34px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #0f9d58, #56ab2f); /* Emerald to Lime */
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(15,157,88,0.35);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.45s ease;
+  backdrop-filter: blur(6px); /* subtle glass effect */
+}
+
+/* Premium Hover Effect */
+.hero-slider .hero-content .cta-container a:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 10px 30px rgba(17, 138, 178, 0.55);
+  background: linear-gradient(135deg, #1a2980, #26d0ce); /* Royal Blue to Teal */
+}
+
+/* Animated Gradient Shine */
+.hero-slider .hero-content .cta-container a::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -120%;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.25);
+  transform: skewX(-20deg);
+  transition: 0.6s;
+}
+
+.hero-slider .hero-content .cta-container a:hover::before {
+  left: 120%;
+}
+
+
+/* ---------------- Navigation Arrows ---------------- */
+.hero-slider .slider-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero-slider .slider-arrows .arrow {
+  pointer-events: all;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 2rem;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hero-slider .slider-arrows .arrow:hover {
+  background: linear-gradient(135deg, #0066cc, #00aaff);
+  color: #fff;
+}
+
+.hero-slider .slider-arrows .arrow-tooltip {
+  position: absolute;
+  bottom: -25px;
+  font-size: 0.7rem;
+  background: rgba(0,0,0,0.6);
+  padding: 2px 6px;
+  border-radius: 5px;
+  display: none;
+}
+
+.hero-slider .slider-arrows .arrow:hover .arrow-tooltip {
+  display: block;
+}
+
+/* ---------------- Slide Extras ---------------- */
+.hero-slider .slider-extras {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  z-index: 3;
+}
+
+.hero-slider .slide-counter {
+  color: #fff;
+  font-weight: 600;
+  background: rgba(0,0,0,0.5);
+  padding: 5px 10px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+}
+
+.hero-slider .autoplay-control i {
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-slider .autoplay-control i:hover {
+  color: #00aaff;
+}
+
+/* ---------------- Slide Progress Bar ---------------- */
+.hero-slider .slide-progress {
+  width: 200px;
+  height: 6px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.hero-slider .slide-progress .progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #0066cc, #00aaff);
+  transition: width 4s linear;
+}
+
+/* ---------------- Animations ---------------- */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 1200px) {
+  .hero-slider .hero-content h1 {
+    font-size: 2.7rem;
+  }
+  .hero-slider .hero-content p {
+    font-size: 1.25rem;
+  }
+}
+
+/* ================= HERO SLIDER MOBILE ================= */
+@media (max-width: 768px) {
+  .hero-slider .hero-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 12px;
+    text-align: center;
+    animation: none;
+  }
+
+  .hero-slider .hero-content h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin: 12px 0 8px;
+    background: linear-gradient(120deg, #ffe680, #ff8c00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+  }
+
+  .hero-slider .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .hero-slider .hero-content .cta-container a {
+    display: block;
+    margin: 6px auto;
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    border-radius: 35px;
+    transition: all 0.3s ease;
+  }
+
+  .hero-slider .hero-content .cta-container a:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(255,78,80,0.45);
+  }
+
+  .hero-slider .hero-content .premium-badge {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+  }
+
+   .hero-slider .hero-content .stats {
+    gap: 12px;
+    font-size: 0.85rem;
+  }
+  .hero-slider .hero-content .stats span {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .hero-slider .hero-content .investment-badge,
+  .hero-slider .hero-content .protection-features,
+  .hero-slider .hero-content .fabric-types,
+  .hero-slider .hero-content .health-metrics,
+  .hero-slider .hero-content .scholar-quote,
+  .hero-slider .hero-content .impact-statement {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+    margin-top: 5px;
+  }
+
+.hero-slider {
+    height: 100vh; /* full screen height */
+  }
+
+  .hero-slider .slide {
+    height: 100%;
+    background-size: cover;       /* full container cover */
+    background-position: center;  /* center image */
+    background-repeat: no-repeat;
+  }
+
+  .hero-slider .slide img {
+    display: none; /* remove duplicate image */
+  }
+
+  .hero-slider .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 95%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .hero-slider .slider-arrows {
+    top: 50%; /* vertically center */
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    justify-content: space-between; /* left & right placement */
+    padding: 0 15px; /* screen edges থেকে spacing */
+  }
+
+  .hero-slider .slider-arrows .arrow {
+    width: 35px;      
+    height: 35px;     
+    font-size: 1.2rem; 
+  }
+
+ 
+
+  .hero-slider .slider-extras {
+    bottom: 5px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .hero-slider .slide-counter {
+    font-size: 0.7rem;
+    padding: 2px 5px;
+  }
+
+  .hero-slider .autoplay-control i {
+    font-size: 0.9rem;
+  }
+
+  .hero-slider .slide-progress {
+    width: 100px;
+    height: 3px;
+  }
+
+  .hero-slider .slide-progress .progress-bar {
+    transition: width 4s linear;
+  }
+  
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Abdus Sattar Foundation</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/abdus-sattar.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+</head>
+<body>
+  <!-- Header Include -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('header.html').then(r=>r.text()).then(html=>{
+      document.getElementById('header-placeholder').innerHTML = html;
+      initHeader();
+    });
+  </script>
+  <script src="assets/js/header.js"></script>
+  
+  <!-- Main Content -->
+  <div id="abdus-sattar-foundation">
+
+    <!-- Section: Title -->
+    <section class="container section-title" id="asf-section-title">
+      <h2 id="asf-title">Abdus Sattar Foundation</h2>
+      <p class="subtitle" id="asf-subtitle">
+        Abdus Sattar Foundation is a non-profit organization committed to making a positive impact in areas such as <strong>education, healthcare, and community development</strong>. 
+        We aim to uplift lives, spread kindness, and create opportunities for a meaningful and fulfilling life for all.
+      </p>
+    </section>
+
+    <!-- Section: Mission & Vision -->
+    <section class="container section-mission-vision" id="asf-section-mv">
+      <h3 id="asf-mv-title">Our Mission & Vision</h3>
+      <div class="mv-grid" id="asf-mv-grid">
+        <div class="mv-card" id="asf-mission-card">
+          <i class="fas fa-bullseye" id="asf-mission-icon"></i>
+          <h4 id="asf-mission-title">Mission</h4>
+          <p id="asf-mission-text">To improve lives by addressing critical social needs and promoting sustainable development through community-driven initiatives.</p>
+        </div>
+        <div class="mv-card" id="asf-vision-card">
+          <i class="fas fa-eye" id="asf-vision-icon"></i>
+          <h4 id="asf-vision-title">Vision</h4>
+          <p id="asf-vision-text">To create a world where every individual has the chance to thrive, contribute, and live with dignity and opportunity.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Core Values -->
+    <section class="container section-values" id="asf-section-values">
+      <h3 id="asf-values-title">Our Values</h3>
+      <div class="values-grid" id="asf-values-grid">
+        <div class="value-card" id="asf-value-compassion"><i class="fas fa-hand-holding-heart"></i><p>Compassion</p></div>
+        <div class="value-card" id="asf-value-innovation"><i class="fas fa-lightbulb"></i><p>Innovation</p></div>
+        <div class="value-card" id="asf-value-collaboration"><i class="fas fa-users"></i><p>Collaboration</p></div>
+        <div class="value-card" id="asf-value-integrity"><i class="fas fa-balance-scale"></i><p>Integrity</p></div>
+        <div class="value-card" id="asf-value-sustainability"><i class="fas fa-seedling"></i><p>Sustainability</p></div>
+      </div>
+    </section>
+
+    <!-- Section: Community Projects -->
+    <section class="container section-projects" id="asf-section-projects">
+      <h3 id="asf-projects-title">Our Community Initiatives</h3>
+      <p id="asf-projects-text">We actively engage with local communities to address their specific needs and create long-lasting positive changes. Some of our initiatives include:</p>
+      <ul class="projects-list" id="asf-projects-list">
+        <li id="asf-project-education"><i class="fas fa-check-circle"></i> Education support programs for underprivileged children</li>
+        <li id="asf-project-healthcare"><i class="fas fa-check-circle"></i> Healthcare access and awareness campaigns</li>
+        <li id="asf-project-skill"><i class="fas fa-check-circle"></i> Community development and skill-building workshops</li>
+        <li id="asf-project-relief"><i class="fas fa-check-circle"></i> Disaster relief and emergency support</li>
+      </ul>
+    </section>
+
+    <!-- Section: Call to Action -->
+    <section class="container section-cta" id="asf-section-cta">
+      <h3 id="asf-cta-title">Join Our Mission</h3>
+      <p id="asf-cta-text">
+        Be a part of Abdus Sattar Foundation's journey to create a brighter, more equitable future. 
+        Your support can help transform lives and uplift communities.
+      </p>
+      <a href="contact.html" class="cta-btn" id="asf-cta-btn">Get Involved</a>
+    </section>
+
+  </div>
+  
+  <!-- Footer Include -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html').then(r=>r.text()).then(html=>{
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+  </script>
+</body>
+</html>

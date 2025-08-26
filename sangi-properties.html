@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>SANGi Properties & Development</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/sangi-properties.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+</head>
+<body>
+  <!-- Header Include -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('header.html').then(r=>r.text()).then(html=>{
+      document.getElementById('header-placeholder').innerHTML = html;
+      initHeader();
+    });
+  </script>
+  <script src="assets/js/header.js"></script>
+  
+  <!-- Main Content -->
+  <div id="sangi-properties-development">
+
+    <!-- Section: Title -->
+    <section class="container section-title" id="spd-section-title">
+      <h2 id="spd-title">SANGi Properties & Development</h2>
+      <p class="subtitle" id="spd-subtitle">
+          SANGi Protein & Agro Complex - Committed to delivering high-quality, sustainable protein and agricultural solutions, empowering communities, supporting farmers, and fostering innovation for a healthier and more prosperous future.      </p>
+    </section>
+
+    <!-- Section: About -->
+    <section class="container section-about" id="spd-section-about">
+      <h3 id="spd-about-title">About Us</h3>
+      <p id="spd-about-text">
+        Established in 2012, SANGi Properties & Development focuses on creating sustainable, high-quality properties. Our mission is to provide innovative and reliable real estate solutions, building lasting relationships with clients and partners.
+      </p>
+      <ul class="about-points" id="spd-about-points">
+        <li id="spd-mission"><i class="fas fa-check-circle"></i> Mission: Sustainable, high-quality property solutions</li>
+        <li id="spd-vision"><i class="fas fa-check-circle"></i> Vision: Leading property developer in Bangladesh</li>
+        <li id="spd-values"><i class="fas fa-check-circle"></i> Core Values: Integrity, Innovation, Excellence, Customer Satisfaction</li>
+      </ul>
+    </section>
+
+    <!-- Section: Projects -->
+    <section class="container section-projects" id="spd-section-projects">
+      <h3 id="spd-projects-title">Our Projects</h3>
+      <div class="project-grid" id="spd-project-grid">
+        <div class="project-card" id="project1">
+          <img src="assets/images/project1.jpg" alt="Project 1" id="project1-img">
+          <h4 id="project1-title">Luxury Apartments</h4>
+          <p id="project1-desc">Location: Dhaka | Area: 15,000 sq.ft | Status: Completed</p>
+        </div>
+        <div class="project-card" id="project2">
+          <img src="assets/images/project2.jpg" alt="Project 2" id="project2-img">
+          <h4 id="project2-title">Commercial Complex</h4>
+          <p id="project2-desc">Location: Chittagong | Area: 25,000 sq.ft | Status: Ongoing</p>
+        </div>
+        <div class="project-card" id="project3">
+          <img src="assets/images/project3.jpg" alt="Project 3" id="project3-img">
+          <h4 id="project3-title">Township Development</h4>
+          <p id="project3-desc">Location: Sylhet | Area: 50,000 sq.ft | Status: Ongoing</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Services -->
+    <section class="container section-services" id="spd-section-services">
+      <h3 id="spd-services-title">Our Services</h3>
+      <div class="service-grid" id="spd-service-grid">
+        <div class="service-card" id="service1"><i class="fas fa-building" id="service1-icon"></i><h4 id="service1-title">Property Development</h4><p id="service1-desc">Residential & commercial developments from concept to completion.</p></div>
+        <div class="service-card" id="service2"><i class="fas fa-hand-holding-usd" id="service2-icon"></i><h4 id="service2-title">Real Estate Consultancy</h4><p id="service2-desc">Expert advice on property investments and planning.</p></div>
+        <div class="service-card" id="service3"><i class="fas fa-tools" id="service3-icon"></i><h4 id="service3-title">Construction Solutions</h4><p id="service3-desc">End-to-end construction and engineering services.</p></div>
+        <div class="service-card" id="service4"><i class="fas fa-chart-line" id="service4-icon"></i><h4 id="service4-title">Project Management</h4><p id="service4-desc">Ensuring timely, quality-driven, and cost-effective project delivery.</p></div>
+      </div>
+    </section>
+
+    <!-- Section: Testimonials -->
+    <section class="container section-testimonials" id="spd-section-testimonials">
+      <h3 id="spd-testimonials-title">Client Testimonials</h3>
+      <div class="testimonial-grid" id="spd-testimonial-grid">
+        <div class="testimonial-card" id="testimonial1">
+          <p id="testimonial1-text">"SANGi Properties delivered our dream home on time with exceptional quality!"</p>
+          <h5 id="testimonial1-author">ABC , Dhaka</h5>
+        </div>
+        <div class="testimonial-card" id="testimonial2">
+          <p id="testimonial2-text">"Professional and transparent service throughout our commercial project."</p>
+          <h5 id="testimonial2-author">ABC , Chittagong</h5>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Contact CTA -->
+    <section class="container section-cta" id="spd-section-cta">
+      <h3 id="spd-cta-title">Get In Touch</h3>
+      <p id="spd-cta-text">Looking for your next property investment or development partner? Contact SANGi Properties & Development today!</p>
+      <a href="contact.html" class="cta-btn" id="spd-cta-btn">Contact Us</a>
+    </section>
+
+  </div>
+  
+  <!-- Footer Include -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html').then(r=>r.text()).then(html=>{
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+  </script>
+</body>
+</html>

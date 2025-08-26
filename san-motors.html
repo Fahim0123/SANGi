@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAN Motor's Limited - SANGi</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/san-motors.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+</head>
+<body>
+  
+<!-- index.html / onno page -->
+<div id="header-placeholder"></div>
+
+<script>
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+      
+      // JS load kora header inject er por
+      initHeader(); // <--- call initHeader here
+  });
+</script>
+<script src="assets/js/header.js"></script>
+
+<!-- Main Content -->
+<div id="san-motors-content">
+
+ <!-- Section: SAN Motor's Limited -->
+<section class="container section-title" id="sti-section-title">
+  <h2 id="sti-title">SAN Motor's Limited</h2>
+  <p class="subtitle" id="sti-subtitle">
+    As Bangladesh's leading automotive manufacturer, <strong>SAN Motor's Limited</strong> produces 15,000+ vehicles annually using cutting-edge German and Japanese technology. 
+    Our ISO 9001-certified facilities feature robotic assembly lines, zero-waste production, and a commitment to premium quality and innovation.
+  </p>
+</section>
+
+
+  <!-- Vehicle Models Section -->
+  <div id="vehicle-models" class="container">
+    <h2 id="vehicle-models-title">Our Vehicle Models</h2>
+    <div id="model-grid" class="model-grid">
+      <div id="model-1" class="model-card">
+        <img src="assets/images/banner 1.webp" alt="Model 1">
+        <h3>Premium Sedan</h3>
+        <p>German-engineered luxury sedan with advanced safety & comfort.</p>
+      </div>
+      <div id="model-2" class="model-card">
+        <img src="assets/images/banner 1.webp" alt="Model 2">
+        <h3>Luxury SUV</h3>
+        <p>Robust SUV designed for family and off-road adventures.</p>
+      </div>
+      <div id="model-3" class="model-card">
+        <img src="assets/images/banner 1.webp" alt="Model 3">
+        <h3>City Hatchback</h3>
+        <p>Compact and efficient hatchback, perfect for urban driving.</p>
+      </div>
+      <div id="model-4" class="model-card">
+        <img src="assets/images/banner 1.webp" alt="Model 4">
+        <h3>Executive Crossover</h3>
+        <p>Blend of luxury and performance with eco-friendly features.</p>
+      </div>
+      <div id="model-5" class="model-card">
+        <img src="assets/images/banner 1.webp" alt="Model 5">
+        <h3>Electric Sedan</h3>
+        <p>Next-gen electric vehicle with premium tech & zero emissions.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+<div id="features" class="container">
+  <h2 id="features-title">Why Choose SAN Motor's?</h2>
+  <div id="feature-grid" class="feature-grid">
+    
+    <div id="feature-1" class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-cogs"></i>
+      </div>
+      <h3>Advanced Technology</h3>
+      <p>German & Japanese engineering ensures top-notch performance and durability.</p>
+    </div>
+
+    <div id="feature-2" class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-award"></i>
+      </div>
+      <h3>ISO Certified</h3>
+      <p>ISO 9001 certification guarantees strict quality management and standards.</p>
+    </div>
+
+    <div id="feature-3" class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-leaf"></i>
+      </div>
+      <h3>Eco-Conscious Production</h3>
+      <p>Zero-waste production and environmentally friendly practices.</p>
+    </div>
+
+    <div id="feature-4" class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-headset"></i>
+      </div>
+      <h3>After-Sales Support</h3>
+      <p>Extensive service network ensuring smooth ownership experience.</p>
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Gallery Section -->
+  <div id="gallery" class="container">
+    <h2 id="gallery-title">Gallery</h2>
+    <div id="gallery-grid" class="gallery-grid">
+      <img id="gallery-1" src="assets/images/banner 1.webp" alt="Gallery 1">
+      <img id="gallery-2" src="assets/images/banner 1.webp" alt="Gallery 2">
+      <img id="gallery-3" src="assets/images/banner 1.webp" alt="Gallery 3">
+      <img id="gallery-4" src="assets/images/banner 1.webp" alt="Gallery 4">
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div id="testimonials" class="container">
+    <h2 id="testimonials-title">What Our Customers Say</h2>
+    <div id="testimonial-grid" class="testimonial-grid">
+      <div id="testimonial-1" class="testimonial-card">
+        <p>"The premium quality and smooth performance of SAN Motor vehicles is unmatched in Bangladesh."</p>
+        <span>- Mr. Rahman, Dhaka</span>
+      </div>
+      <div id="testimonial-2" class="testimonial-card">
+        <p>"Excellent after-sales support and cutting-edge technology. Highly recommended!"</p>
+        <span>- Ms. Akter, Chattogram</span>
+      </div>
+      <div id="testimonial-3" class="testimonial-card">
+        <p>"I love the design and fuel efficiency of my new SAN Motor Sedan."</p>
+        <span>- Mr. Karim, Sylhet</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Section: Contact CTA -->
+    <section class="container section-cta" id="sti-section-cta">
+      <h3 id="sti-cta-title">Get In Touch</h3>
+      <p id="sti-cta-text">Looking for Get to know the passionate engineers, designers, and technicians behind <strong>San Motor's</strong> success stories, and learn about their expertise and commitment to excellence.</p>
+  <a href="contact.html" class="cta-btn" id="sti-cta-btn">Contact Us</a>
+  </section>
+
+ <!-- Footer -->
+<div id="footer-placeholder"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => { document.getElementById('footer-placeholder').innerHTML = data; });
+</script>
+
+  <!-- JS -->
+  <script src="assets/js/header.js"></script>
+  <!-- JS -->
+  <script src="assets/js/header.js"></script>
+</body>
+</html>

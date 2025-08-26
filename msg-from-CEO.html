@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Message from the Founder & CEO</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/msg-from-CEO.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+</head>
+<body>
+  <!-- Header Include -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('header.html').then(r=>r.text()).then(html=>{
+      document.getElementById('header-placeholder').innerHTML = html;
+      initHeader();
+    });
+  </script>
+  <script src="assets/js/header.js"></script>
+  
+  <!-- Main Content -->
+  <div id="erb-page">
+
+    <!-- Section: Title -->
+    <section class="container section-title" id="erb-section-title">
+      <h2 id="erb-title">Message from the Founder & CEO</h2>
+      <p class="subtitle" id="erb-subtitle">
+        At SAN Group, we are committed to building a legacy of <strong>trust, innovation, and excellence</strong> across diverse industries.
+        Since our inception in <strong>2012</strong>, our mission has been to create meaningful impacts by delivering high-quality products and services 
+        that empower businesses and enrich communities.
+      </p>
+    </section>
+
+    <!-- Section: CEO Message -->
+    <section class="container section-message" id="erb-section-message">
+      <div class="message-box" id="erb-message-box">
+        <i class="fas fa-quote-left"></i>
+        <p id="erb-message-text">
+          Our journey reflects resilience, adaptability, and a strong dedication to ethical practices. 
+          With the establishment of the Central Shariah Board, we reaffirm our pledge to uphold the highest standards of integrity 
+          and align our operations with principles that benefit not only our stakeholders but also the broader society.
+        </p>
+        <p id="erb-message-text-2">
+          As we continue to grow, I am deeply grateful for the unwavering support of our clients, partners, and employees. 
+          Together, we will move forward to create a brighter, sustainable future for all.
+        </p>
+        <div class="founder-signature" id="erb-founder">
+          <h4>Md. Sajedul Islam</h4>
+          <p>Founder & CEO, SAN Group</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Mission & Vision -->
+    <section class="container section-mission-vision" id="erb-section-mv">
+      <h3 id="erb-mv-title">Our Mission & Vision</h3>
+      <div class="mv-grid" id="erb-mv-grid">
+        <div class="mv-card" id="erb-mission-card">
+          <i class="fas fa-bullseye" id="erb-mission-icon"></i>
+          <h4 id="erb-mission-title">Mission</h4>
+          <p id="erb-mission-text">
+            To create value-driven enterprises that operate with responsibility, deliver excellence, 
+            and contribute to the socio-economic growth of the communities we serve.
+          </p>
+        </div>
+        <div class="mv-card" id="erb-vision-card">
+          <i class="fas fa-eye" id="erb-vision-icon"></i>
+          <h4 id="erb-vision-title">Vision</h4>
+          <p id="erb-vision-text">
+            To become a globally respected conglomerate known for innovation, ethical practices, 
+            and creating sustainable opportunities for future generations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Core Values -->
+    <section class="container section-values" id="erb-section-values">
+      <h3 id="erb-values-title">Our Core Values</h3>
+      <div class="values-grid" id="erb-values-grid">
+        <div class="value-card" id="erb-value-integrity"><i class="fas fa-balance-scale"></i><p>Integrity</p></div>
+        <div class="value-card" id="erb-value-excellence"><i class="fas fa-gem"></i><p>Excellence</p></div>
+        <div class="value-card" id="erb-value-innovation"><i class="fas fa-lightbulb"></i><p>Innovation</p></div>
+        <div class="value-card" id="erb-value-collaboration"><i class="fas fa-users"></i><p>Collaboration</p></div>
+        <div class="value-card" id="erb-value-sustainability"><i class="fas fa-seedling"></i><p>Sustainability</p></div>
+      </div>
+    </section>
+
+    <!-- Section: Initiatives -->
+    <section class="container section-projects" id="erb-section-projects">
+      <h3 id="erb-projects-title">Our Key Initiatives</h3>
+      <p id="erb-projects-text">SAN Group's initiatives reflect our strong commitment to progress, innovation, and positive impact:</p>
+      <ul class="projects-list" id="erb-projects-list">
+        <li id="erb-project-industries"><i class="fas fa-check-circle"></i> Expansion across multiple industries</li>
+        <li id="erb-project-ethics"><i class="fas fa-check-circle"></i> Strengthening ethical governance & Shariah-compliance</li>
+        <li id="erb-project-community"><i class="fas fa-check-circle"></i> Driving community development programs</li>
+        <li id="erb-project-sustainability"><i class="fas fa-check-circle"></i> Embracing sustainable growth models</li>
+      </ul>
+    </section>
+
+    <!-- Section: Call to Action -->
+    <section class="container section-cta" id="erb-section-cta">
+      <h3 id="erb-cta-title">Join Us in Shaping the Future</h3>
+      <p id="erb-cta-text">
+        Be part of SAN Group's mission to build enterprises with trust, innovation, and responsibility.  
+        Together, we can create a sustainable tomorrow.
+      </p>
+      <a href="contact.html" class="cta-btn" id="erb-cta-btn">Get Involved</a>
+    </section>
+
+  </div>
+  
+  <!-- Footer Include -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html').then(r=>r.text()).then(html=>{
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+  </script>
+</body>
+</html>

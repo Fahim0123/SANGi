@@ -1,0 +1,831 @@
+/* ================== SANGi Protein & Agro Complex - Premium Styles ================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ================== Variables ================== */
+:root {
+    --primary: #2c3e50;
+    --primary-dark: #1a2530;
+    --primary-light: #4b6584;
+    --secondary: #e74c3c;
+    --accent: #3498db;
+    --accent-light: #5dade2;
+    --gold: #f39c12;
+    --silver: #bdc3c7;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --darker: #1a2530;
+    --success: #27ae60;
+    
+    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, #ff6b6b 100%);
+    --gradient-gold: linear-gradient(135deg, var(--gold) 0%, #e67e22 100%);
+    --gradient-silver: linear-gradient(135deg, var(--silver) 0%, #95a5a6 100%);
+    
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+    
+    --transition-fast: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-slow: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    --border-radius: 16px;
+    --border-radius-lg: 24px;
+}
+
+/* ================== Global Styles ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.7;
+    background-color: #f9f9f9;
+    background-image: 
+        radial-gradient(circle at 5% 10%, rgba(236, 240, 241, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 95% 10%, rgba(236, 240, 241, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 50% 90%, rgba(236, 240, 241, 0.3) 0%, transparent 20%);
+    background-attachment: fixed;
+}
+
+#sangi-protein-agro-complex {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+
+.container {
+    margin-bottom: 6rem;
+    padding: 3.5rem;
+    border-radius: var(--border-radius-lg);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--accent);
+    opacity: 0.8;
+    transition: var(--transition-slow);
+}
+
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.container:hover::before {
+    opacity: 1;
+    height: 6px;
+}
+
+h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 3.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 5px;
+    background: var(--gradient-secondary);
+    border-radius: 3px;
+}
+
+h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: var(--gradient-accent);
+    border-radius: 3px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin: 1.2rem 0 0.8rem;
+    color: var(--primary-dark);
+}
+
+h5 {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-top: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+strong {
+    color: var(#3498db);
+    font-weight: 700;
+    position: relative;
+    padding: 0 2px;
+}
+
+
+/* ===================== Section: Title ===================== */
+.section-title {
+    text-align: center;
+    padding: 4rem 3rem;
+    background: var(--gradient-primary);
+    border-radius: var(--border-radius-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    transform: rotate(30deg);
+}
+
+/* Section Title Text */
+.section-title h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    position: relative;
+    z-index: 2;
+
+    /* Remove gradient effect */
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: text;
+    -webkit-text-fill-color: #fff !important; /* Ensures white */
+    color: #fff !important;
+}
+
+
+/* Section Title Underline */
+.section-title h2::after {
+    content: '';
+    display: block;
+    width: 100px;          /* underline width */
+    height: 5px;           /* underline thickness */
+    background: linear-gradient(#ff6b6b) !important; /* 🔹 Change color here */
+    margin: 1rem auto 0;   /* spacing above & centering */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    z-index: 2;
+    margin-top: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+ }
+
+/* ================= Stats Section - Premium ================= */
+#spac-section-stats-overview {
+  padding: 100px 20px;
+  background: #f9f9fb;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+}
+
+/* Top Gradient Border */
+#spac-section-stats-overview::after {
+   content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #135fa5, #097de9);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+/* Section Title */
+#spac-stats-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+
+/* Description */
+.stats-description {
+  text-align: center;
+  color: #555;
+  max-width: 750px;
+  margin: 0 auto 3rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+}
+
+/* Stats Grid */
+#spac-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Stat Card */
+.stat-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.4s ease;
+  border-left: 6px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Stat Values */
+.stat-card h4 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+
+/* Stat Value Hover Color */
+.stat-card:hover h4 {
+  color: #3498db;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  #spac-section-stats-overview { padding: 80px 20px; }
+  #spac-stats-title { font-size: 2.4rem; }
+  .stat-card { padding: 2rem 1.5rem; }
+}
+
+@media (max-width: 576px) {
+  #spac-section-stats-overview { padding: 60px 15px; }
+  #spac-stats-title { font-size: 2rem; }
+  #spac-stats-grid { gap: 1.5rem; }
+  .stat-card { padding: 1.8rem 1rem; }
+}
+
+
+/* ================== section-vision ================== */
+/* ================= Vision & Mission Premium ================= */
+#spac-section-vision {
+  padding: 80px 20px;
+  background: #fafafa;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Top border strip */
+#spac-section-vision::after {
+   content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #135fa5, #097de9);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+/* Section Title */
+#spac-vision-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #1a2530, #2c3e50);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+.vision-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Vision Grid */
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Vision Card */
+.vision-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 6px solid transparent; /* Left border */
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.vision-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Unique border colors for mission & vision */
+.vision-card.mission {
+  border-left: 6px solid #27ae60; /* Green */
+}
+
+.vision-card.vision {
+  border-left: 6px solid #2980b9; /* Blue */
+}
+
+/* Hover Effects */
+.vision-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.vision-card:hover h4 {
+  color: #000;
+}
+
+.vision-card:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: rgba(39,174,96,0.05);
+}
+
+
+/* ================== Achievement/ statistic ================== */
+.stats-section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+/* Underline with gap */
+#spac-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 8px auto 0;  /* টাইটেলের নিচে ৮px gap */
+  background: linear-gradient(90deg,#135fa5, #097de9);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Hover effect on underline */
+#spac-title:hover::after {
+  width: 120px;
+}
+
+.stats-section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Left border line (hidden initially) */
+.stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+    background: var(--accent); /* icon hover color */
+    transition: height 0.4s ease;
+    border-radius: 0 0 6px 6px;
+}
+
+/* Animate line on hover */
+.stat-card:hover::before {
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+/* Icon hover color */
+.stat-card:hover .stat-icon {
+    transform: scale(1.2);
+    color: var(--accent-light); /* same as left border line */
+}
+
+.stat-title {
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+.stat-desc {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*===================Fearuew list===============*/
+/* Features List - Premium */
+.features-list {
+  list-style: none;
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0;
+}
+
+/* Feature Item */
+.features-list li {
+  padding: 1.8rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-left: 6px solid #3084d3; /* Left border static */
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  backdrop-filter: blur(8px); /* Glassy effect */
+}
+
+/* Remove vertical border animation */
+.features-list li::before {
+  display: none;
+}
+
+/* Icon */
+.features-list li i {
+  font-size: 1.8rem;
+  color: #27ae60;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Text */
+.features-list li p,
+.features-list li {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Hover Effects */
+.features-list li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  background: #fff;
+}
+
+.features-list li:hover i {
+  transform: scale(1.2); /* rotate removed */
+  color: #2980b9;
+}
+
+
+
+
+/* Section: Military Supply */
+#spac-section-military {
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  background: #f9f9fb;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.military-header .military-icon {
+   display: none;
+} */
+
+#spac-military-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #1a2530, #2c3e50);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#spac-military-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, #135fa5, #097de9);
+  border-radius: 2px;
+}
+
+/* Description */
+#spac-military-text {
+  max-width: 850px;
+  margin: 1rem auto 2.5rem;
+  font-size: 1.5rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* Military Highlights Grid */
+.military-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Military Card */
+.military-card {
+  background: #fff;
+  padding: 2rem 1.2rem;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  border-left: 6px solid transparent; /* Left border placeholder */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Left Border Line - Hidden initially */
+.military-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;              /* Border thickness */
+  height: 0;               /* Start from 0 */
+  background: linear-gradient(180deg, #247ccd, #097de9);
+  border-radius: 6px 0 0 6px;
+  transition: height 0.4s ease;
+}
+
+/* Animate line on hover */
+.military-card:hover::before {
+  height: 100%; /* Extend from top to bottom */
+}
+
+/* Card Icon */
+.military-card i {
+  font-size: 2rem;
+  color: #27ae60;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Card Heading */
+.military-card h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+}
+
+/* Card Text */
+.military-card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Hover Effects */
+.military-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+  background: #fafafa;
+}
+
+.military-card:hover i {
+  transform: scale(1.2);
+  color: #2c3e50;
+}
+
+
+/*=========CTA Button===========*/
+.section-cta {
+    text-align: center;
+    background: var(--gradient-accent);
+    color: white;
+}
+
+.section-cta h3 {
+    color: rgb(255, 255, 255);
+}
+
+.section-cta h3::after {
+    background: rgba(30, 30, 31, 0.5);
+}
+
+.section-cta p {
+    color: rgba(41, 38, 38, 0.9);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: white;
+    color: var(--primary);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
+    transform: translateY(100%);
+    transition: var(--transition);
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cta-btn:hover::before {
+    transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* ================== Responsive ================== */
+@media (max-width: 992px) {
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 2rem; }
+    .container { padding: 2rem; }
+    .stats-grid, .features-list { gap: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+    h2 { font-size: 2.2rem; }
+    h3 { font-size: 1.8rem; }
+    .container { padding: 1.5rem; }
+    .stats-grid, .features-list { grid-template-columns: 1fr; }
+}

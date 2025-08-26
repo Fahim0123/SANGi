@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>SANGi Spinning and Textile Mills</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/sangi-textile.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+</head>
+<body>
+
+  <!-- Header Include -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('header.html').then(r => r.text()).then(html => {
+      document.getElementById('header-placeholder').innerHTML = html;
+      if(typeof initHeader === "function") initHeader();
+    });
+  </script>
+  <script src="assets/js/header.js"></script>
+
+  <!-- Main Content -->
+  <div id="sangi-textile">
+
+    <!-- Section: Title -->
+    <section class="container section-title" id="st-section-title">
+      <h2 id="st-title">SANGi Spinning and Textile Mills</h2>
+      <p class="subtitle" id="st-subtitle">
+        Weaving innovation with tradition, delivering world-class yarns, fabrics, and complete textile solutions 
+        for local industries and global fashion markets. Our commitment to excellence, sustainability, and client satisfaction sets us apart in the textile industry.
+      </p>
+    </section>
+
+   <!-- Section: About -->
+<section class="container section-about" id="st-section-about">
+
+  <!-- Section Header -->
+  <div class="mv-header">
+    <h1>About Us</h1>
+    <p>Discover the legacy and expertise of SANGi Spinning and Textile Mills, a division of SANGi Group.</p>
+  </div>
+
+  <!-- Premium Paragraph Cards -->
+<div class="about-paragraphs">
+  
+  <div class="about-card">
+    <div class="card-icon">
+      <i class="fas fa-feather-alt"></i>
+    </div>
+    <div class="card-content">
+      <h4>Our Identity</h4>
+      <p>
+        <strong>SANGi Spinning and Textile Mills</strong> is a leading textile division of SANGi Group, 
+        dedicated to producing superior-quality yarns and fabrics for both domestic and international markets. 
+      </p>
+    </div>
+  </div>
+
+  <div class="about-card">
+    <div class="card-icon">
+      <i class="fas fa-cogs"></i>
+    </div>
+    <div class="card-content">
+      <h4>Our Products</h4>
+      <p>
+        We produce <em>100% cotton yarns, blended yarns, and high-performance woven and knitted fabrics</em> 
+        engineered to meet the evolving requirements of global apparel, fashion, and industrial clients. 
+      </p>
+    </div>
+  </div>
+
+  <div class="about-card">
+    <div class="card-icon">
+      <i class="fas fa-leaf"></i>
+    </div>
+    <div class="card-content">
+      <h4>Sustainability</h4>
+      <p>
+        Sustainability is a core pillar of our operations. We employ eco-friendly processes, responsibly source raw materials, 
+        and implement energy-efficient systems to minimize environmental impact. 
+      </p>
+    </div>
+  </div>
+
+  <div class="about-card">
+    <div class="card-icon">
+      <i class="fas fa-handshake"></i>
+    </div>
+    <div class="card-content">
+      <h4>Partnerships</h4>
+      <p>
+        We maintain close collaboration with garment manufacturers, fashion brands, and industrial clients, 
+        ensuring that every order reflects our commitment to quality, timeliness, and service excellence. 
+      </p>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ================= Mission / Vision / Values Section ================= -->
+<section id="mission-vision-values-section" class="container mv-section">
+
+  <!-- ---------------- Section Header ---------------- -->
+  <div class="mv-section-header text-center">
+    <h2 class="mv-section-title">Our Mission, Vision & Values</h2>
+    <p class="mv-section-subtitle">
+      Guiding principles that define our purpose, inspire our team, and shape the way we deliver world-class textiles globally.
+    </p>
+  </div>
+
+  <!-- ---------------- Cards Wrapper ---------------- -->
+  <div class="mv-cards-wrapper">
+
+    <!-- ---------------- Card 1: Mission ---------------- -->
+    <div class="mv-card" id="mv-mission">
+      <div class="mv-card-icon">
+        <i class="fas fa-bullseye"></i>
+      </div>
+      <div class="mv-card-content">
+        <h4 class="mv-card-title">Mission</h4>
+        <p class="mv-card-text">
+          To produce world-class yarns and fabrics combining innovation, sustainability, and unmatched quality. 
+          Every product is crafted with precision and care, reflecting our dedication to excellence.
+        </p>
+        <span class="mv-card-badge">Focused Excellence</span>
+      </div>
+    </div>
+
+    <!-- ---------------- Card 2: Vision ---------------- -->
+    <div class="mv-card" id="mv-vision">
+      <div class="mv-card-icon">
+        <i class="fas fa-lightbulb"></i>
+      </div>
+      <div class="mv-card-content">
+        <h4 class="mv-card-title">Vision</h4>
+        <p class="mv-card-text">
+          To be recognized globally as a leading textile manufacturer, setting benchmarks for excellence and responsibility. 
+          We aim to inspire confidence through innovation, quality, and sustainable practices.
+        </p>
+        <span class="mv-card-badge">Global Recognition</span>
+      </div>
+    </div>
+
+    <!-- ---------------- Card 3: Core Values ---------------- -->
+    <div class="mv-card" id="mv-values">
+      <div class="mv-card-icon">
+        <i class="fas fa-gem"></i>
+      </div>
+      <div class="mv-card-content">
+        <h4 class="mv-card-title">Core Values</h4>
+        <p class="mv-card-text">
+          Integrity, Innovation, Sustainability, Excellence, Client Satisfaction, Reliability. 
+          These principles guide every decision, process, and partnership we undertake.
+        </p>
+        <span class="mv-card-badge">Our Principles</span>
+      </div>
+    </div>
+
+  </div> <!-- End of mv-cards-wrapper -->
+
+</section>
+
+
+
+    <!-- Section: Products -->
+    <section class="container section-products" id="st-section-products">
+      <h3 id="st-products-title">Our Products</h3>
+      <div class="product-grid" id="st-product-grid">
+        <div class="product-card" id="product1">
+          <img src="assets/images/textile-yarn.jpg" alt="Premium Yarns" id="product1-img">
+          <h4 id="product1-title">Premium Yarns</h4>
+          <p id="product1-desc">High-quality cotton, blended, and synthetic yarns for apparel, industrial use, and fashion exports.</p>
+        </div>
+        <div class="product-card" id="product2">
+          <img src="assets/images/textile-fabric.jpg" alt="Woven & Knitted Fabrics" id="product2-img">
+          <h4 id="product2-title">Fabrics</h4>
+          <p id="product2-desc">Wide range of woven and knitted fabrics designed for fashion, industrial, and technical applications.</p>
+        </div>
+        <div class="product-card" id="product3">
+          <img src="assets/images/textile-solutions.jpg" alt="Textile Solutions" id="product3-img">
+          <h4 id="product3-title">Textile Solutions</h4>
+          <p id="product3-desc">Customized textile solutions and finishes for apparel brands, exporters, and industrial clients.</p>
+        </div>
+      </div>
+    </section>
+
+   <!-- Section: Features -->
+<section class="container section-features" id="st-section-features">
+  <div class="section-header">
+    <h3 id="st-features-title">Why Choose SANGi</h3>
+    <p class="section-subtitle">Discover the key pillars that make SANGi Spinning and Textile Mills a preferred choice globally.</p>
+  </div>
+
+  <div class="feature-grid" id="st-feature-grid">
+    
+    <!-- Feature Card 1 -->
+    <div class="feature-card" id="feature1">
+      <div class="card-icon">
+        <i class="fas fa-industry"></i>
+      </div>
+      <div class="card-content">
+        <h4>Modern Facilities</h4>
+        <p>Advanced spinning, weaving, and finishing units ensuring consistent quality across all products.</p>
+      </div>
+    </div>
+
+    <!-- Feature Card 2 -->
+    <div class="feature-card" id="feature2">
+      <div class="card-icon">
+        <i class="fas fa-leaf"></i>
+      </div>
+      <div class="card-content">
+        <h4>Sustainability</h4>
+        <p>Eco-friendly processes, renewable energy usage, and minimal environmental impact in production.</p>
+      </div>
+    </div>
+
+    <!-- Feature Card 3 -->
+    <div class="feature-card" id="feature3">
+      <div class="card-icon">
+        <i class="fas fa-award"></i>
+      </div>
+      <div class="card-content">
+        <h4>Quality Assurance</h4>
+        <p>Global standard testing and quality control at every stage of production ensures excellence.</p>
+      </div>
+    </div>
+
+    <!-- Feature Card 4 -->
+    <div class="feature-card" id="feature4">
+      <div class="card-icon">
+        <i class="fas fa-users"></i>
+      </div>
+      <div class="card-content">
+        <h4>Global Partnerships</h4>
+        <p>Trusted by international brands, exporters, and industry leaders for reliable supply and service.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Section: CTA -->
+    <section class="container section-cta" id="st-section-cta">
+      <h3 id="st-cta-title">Partner With Us</h3>
+      <p id="st-cta-text">
+        Looking for premium yarns, fabrics, or customized textile solutions? Connect with SANGi Spinning and Textile Mills today and experience world-class quality, innovation, and reliability for your business.
+      </p>
+      <a href="contact.html" class="cta-btn" id="st-cta-btn">Contact Us</a>
+    </section>
+
+  </div>
+
+  <!-- Footer Include -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html').then(r => r.text()).then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
+  </script>
+</body>
+</html>

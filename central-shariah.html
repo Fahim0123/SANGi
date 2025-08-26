@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Central Shariah Board of SAN Group</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/central-shariah.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap">
+</head>
+<body>
+
+  <!-- Header Include -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        if(typeof initHeader === "function") initHeader();
+      });
+  </script>
+  <script src="assets/js/header.js"></script>
+
+  <!-- Main Content Wrapper -->
+  <main id="sangi-shariah-page">
+
+    <!-- Section: Title -->
+    <section class="section-title" id="shariah-section-title">
+      <h2 id="shariah-title">Central Shariah Board of SAN Group</h2>
+      <p class="subtitle" id="shariah-subtitle">
+        Ensuring all SAN Group operations adhere to Shariah principles, fostering ethical business practices, transparency, and trust across diverse industries.
+      </p>
+    </section>
+
+    <!-- Section: Introduction + Mission, Vision & Values -->
+    <section class="section-intro-points" id="shariah-section-intro-points">
+
+      <!-- Introduction -->
+      <div class="intro-description" id="shariah-intro">
+        <div class="intro-container">
+          <header class="intro-header">
+            <h2 class="intro-title">
+              <span class="highlight-gradient">Introduction</span>
+            </h2>
+          </header>
+          <p id="shariah-intro-para1">
+            The <strong><span class="highlight-text">Central Shariah Board of SAN Group</span></strong> plays a pivotal role in aligning all business activities across SAN Group's diverse industries with <span class="highlight-text">Shariah principles</span>.
+          </p>
+          <p id="shariah-intro-para2">
+            Established as part of SAN Group's commitment to <span class="highlight-text">ethical practices</span> and <span class="highlight-text">social responsibility</span>, the board oversees compliance with Islamic guidelines in areas such as finance, investments, and operational processes.
+          </p>
+          <p id="shariah-intro-para3">
+            By maintaining rigorous standards and providing expert guidance, the board ensures every SAN Group initiative is conducted with <span class="highlight-text">integrity, transparency, and accountability</span>.
+          </p>
+          <p id="shariah-intro-para4">
+            Through careful monitoring, advisory roles, and proactive interventions, the Central Shariah Board strengthens stakeholder confidence and reinforces SAN Group's reputation as a <span class="highlight-text">trustworthy, ethically-driven organization</span> dedicated to sustainable growth and innovation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Mission, Vision & Values -->
+      <div class="description-points-grid" id="shariah-points">
+        <ul class="description-points">
+          <li id="shariah-mission" class="description-card">
+            <i class="fas fa-shield-alt" id="shariah-mission-icon"></i>
+            <div class="description-card-text" id="shariah-mission-text">
+              <strong>Mission:</strong> Ensure all SAN Group operations and investments fully comply with Shariah principles while promoting ethical business conduct.
+            </div>
+          </li>
+          <li id="shariah-vision" class="description-card">
+            <i class="fas fa-eye" id="shariah-vision-icon"></i>
+            <div class="description-card-text" id="shariah-vision-text">
+              <strong>Vision:</strong> To be a benchmark for ethical governance and Shariah compliance across industries in Bangladesh and beyond.
+            </div>
+          </li>
+          <li id="shariah-values" class="description-card">
+            <i class="fas fa-handshake" id="shariah-values-icon"></i>
+            <div class="description-card-text" id="shariah-values-text">
+              <strong>Values:</strong> Integrity, Transparency, Accountability, Ethical Practice, Social Responsibility, Innovation.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section: Extended Details -->
+    <section class="extended-description" id="shariah-details">
+      <h2 id="shariah-details-title">Comprehensive Governance & Ethical Oversight</h2>
+      <p id="shariah-details-text">
+        The board provides continuous guidance and oversight across all SAN Group ventures, ensuring financial decisions, operational processes, and corporate strategies strictly adhere to Islamic principles.
+        <br><br>
+        Working closely with management teams, the board evaluates new investments, reviews contracts, and audits processes to maintain full compliance and ethical integrity.
+        <br><br>
+        Its proactive approach fosters a culture of trust and transparency, helping SAN Group sustain long-term growth while upholding the highest moral and professional standards.
+        <br><br>
+        By integrating Shariah governance into everyday operations, the Central Shariah Board ensures SAN Group remains a reliable, innovative, and socially responsible organization.
+      </p>
+    </section>
+
+    <!-- Section: Call To Action -->
+    <section class="container section-cta" id="shariah-section-cta">
+      <h3 id="shariah-cta-title">Get In Touch</h3>
+      <p id="shariah-cta-text">
+        To learn more about our Shariah compliance practices, advisory services, or how the Central Shariah Board ensures ethical and responsible governance across all SAN Group ventures, please reach out to our team today. 
+        Discover how we can support your business in maintaining full compliance while fostering sustainable growth and trust.
+      </p>
+      <a href="contact.html" class="cta-btn" id="shariah-cta-btn">Contact Us</a>
+    </section>
+
+  </main>
+
+  <!-- Footer Include -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  </script>
+
+</body>
+</html>
+

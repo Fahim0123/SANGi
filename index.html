@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANGi</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/mission-vision.css"> 
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/san-motors.css">
+    <link rel="stylesheet" href="assets/css/sangi-trade.css">
+    <link rel="stylesheet" href="assets/css/sangi-properties.css">
+    <link rel="stylesheet" href="assets/css/sangi-protein.css">
+    <link rel="stylesheet" href="assets/css/san-safety.css">
+    <link rel="stylesheet" href="assets/css/sangi-textile.css">
+    <link rel="stylesheet" href="assets/css/ibn-khaldul-vaccine.css">
+    <link rel="stylesheet" href="assets/css/central-shariah.css">
+    <link rel="stylesheet" href="assets/css/abdus-sattar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+</head>
+<body>
+
+<!-- index.html / onno page -->
+<div id="header-placeholder"></div>
+
+<script>
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+      
+      // JS load kora header inject er por
+      initHeader(); // <--- call initHeader here
+  });
+</script>
+<script src="assets/js/header.js"></script>
+
+<!-- Hero Section -->
+<div id="hero-container"></div>
+<script>
+  fetch("hero.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("hero-container").innerHTML = data;
+
+      // Load hero.js dynamically
+      let script = document.createElement("script");
+      script.src = "assets/js/hero.js";
+      script.onload = function() {
+        if(typeof initHeroSlider === "function") {
+          initHeroSlider(); // Initialize slider after JS loaded
+        }
+      };
+      document.body.appendChild(script);
+    });
+</script>
+
+<!-- Mission & Vision -->
+<div id="about-mission"></div>
+<script>
+  fetch('mission-vision.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('about-mission').innerHTML = data;
+    });
+</script>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+
+</body>
+</html>
