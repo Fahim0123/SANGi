@@ -442,8 +442,8 @@
 .mobile-founder-contact {
     display: flex;
     align-items: center;
-    gap: 20px;
-    font-size: 13px;
+    gap: 15px;
+    font-size: 12px;
     font-weight: 500;
     color: #004285;
     padding: 6px 12px;
@@ -779,5 +779,6 @@
         display: none; /* hide mobile dropdown on desktop */
     }
 }
+
 
 
