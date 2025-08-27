@@ -101,7 +101,7 @@
 
 .founder-message {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     white-space: nowrap;
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
@@ -779,6 +779,7 @@
         display: none; /* hide mobile dropdown on desktop */
     }
 }
+
 
 
 
