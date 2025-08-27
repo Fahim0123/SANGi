@@ -1,3 +1,16 @@
+/* ====================== 
+   CSS RESET & BASE STYLES
+   ====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+/* ======================
+   GLOBAL VARIABLES
+   ====================== */
 :root {
     --primary-color: #0066cc;
     --secondary-color: #00aaff;
@@ -14,14 +27,6 @@
     --transition-medium: all 0.35s ease;
     --transition-slow: all 0.5s ease;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', 'Segoe UI', sans-serif;
-}
-
 
 /* ======================
    HEADER STYLES
@@ -298,6 +303,19 @@
     transform: rotate(-12deg) scale(1.15);
 }
 
+/* Desktop Contact + Language Wrapper */
+.desktop-contact-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* space between number & dropdown */
+}
+
+/* Desktop lang hidden by default */
+.desktop-lang {
+    display: none;
+}
+
+
 /* ======================
    MOBILE MENU STYLES
    ====================== */
@@ -443,7 +461,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: #004285;
     padding: 6px 12px;
@@ -489,7 +507,7 @@
    ====================== */
 .mobile-dropdown-menu {
     display: none;
-    max-height: 360px;
+    max-height: 350px;
     overflow-y: hidden;
     transition: max-height 0.3s ease;
     background: var(--bg-white);
@@ -595,6 +613,12 @@
     /* Logo Section - Left aligned */
     .logo-section {
         justify-self: flex-start; /* Force left alignment */
+    }
+
+    .founder-section {
+        display: flex;
+        font-size: 14px;
+        padding: 10px;
     }
 
     /* Mobile Header Right - Right aligned */
@@ -758,17 +782,7 @@
         font-size: 16px;
     }
 }
-/* Desktop Contact + Language Wrapper */
-.desktop-contact-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* space between number & dropdown */
-}
 
-/* Desktop lang hidden by default */
-.desktop-lang {
-    display: none;
-}
 
 /* Show only on desktop */
 @media (min-width: 992px) {
