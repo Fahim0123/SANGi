@@ -489,7 +489,7 @@
    ====================== */
 .mobile-dropdown-menu {
     display: none;
-    max-height: 360px;
+    max-height: 350px;
     overflow-y: hidden;
     transition: max-height 0.3s ease;
     background: var(--bg-white);
@@ -779,6 +779,7 @@
         display: none; /* hide mobile dropdown on desktop */
     }
 }
+
 
 
 
